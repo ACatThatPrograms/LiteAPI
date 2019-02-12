@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>ACAT API Testing</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+
+
+    </head>
+    
+    <div id="item-list-popup" class="popup imgPop">
+    
+        <div class="popup-wrapper">
+        
+            <div class="popup-header"><h2>Image</h2><div class="popup-close"><span>X</span></div></div>
+            
+            <div class="popup-body">
+            
+                <div class="popup-body-section sectionFull imgHolder">
+                    
+                    <h2>Action Panel</h2>
+                    <img src="img/actionspanel.png">
+
+                </div>
+            
+            </div>
+            
+        </div>
+    
+    </div>
+    
+    <body class='body-wrapper helper'>
+        
+        <div class="body-header help-nav">
+        
+            <div class="title">
+            
+                <div class="title-logo"><img src="logo.svg" alt="InRange Logo"></div>
+                <div class="title-text"><h3>Customer Management - Documentation</h3></div>
+            
+            </div>
+            
+            <div class="navigation">
+            
+                <ul>
+                    
+                    <span>Menu:</span>
+                    <a id="command-addCustomer" href="#AddCustomer"><li>Index</li></a>
+                    <li id="command-manageCustomers"><a href="#ManageCustomers">Quick Help</a></li>
+                    <a href="index.html"><li id="command-help">Return to Management</li></a>
+                    
+                </ul>
+            
+            </div>
+        
+        </div>
+        
+        <div class="body-main help-body">
+        
+            <div class="fifty-split helper-split">
+            
+                <div class="split-header">
+                
+                    <h2>Topic Selection</h2>
+                    
+                </div>
+                
+                <div id="add-customer-block" class="split-body-chunk command-box">
+                
+                    <h3>Index</h3>
+                    
+                    <table>
+                        <tr>
+                            <th><a class="indexElement" href="#About">About...</a></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th><a class="indexElement" href="#Copyright">...Copyright</a><br><a class="indexElement" href="#Terms_Of_Use">...Terms of Use</a></th>
+                        </tr>
+                        
+                        <tr>
+                            <th><a class="indexElement" href="#Device_Support">Device Support...</a></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th><a class="indexElement" href="#Browsers">...Browsers</a><br><a class="indexElement" href="#Resolutions">...Resolutions</a></th>
+                        </tr>
+                        
+                        <tr>
+                            <th><a class="indexElement" href="#Getting_Started">Getting Started...</a></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th><a class="indexElement" href="#Quick_Start">...Quick Start</a><br></th>
+                        </tr>
+                        
+                        <tr>
+                            <th><a class="indexElement" href="#The_UI">The User Interface...</a></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th><a class="indexElement" href="#Menu_Panel">...Menu Panel</a>
+                            <br><a class="indexElement" href="#Action_Panel">...Action Panel</a><br><a class="indexElement" href="#Customer_Panel">...Customer Panel</a><br><a class="indexElement" href="#Edit_Orders_Box">...Edit Orders Box</a><br><a class="indexElement" href="#Item_List_Box">...Item List Box</a></th>
+                        </tr>
+                        
+                        <tr>
+                            <th><a class="indexElement" href="#Common_Actions">Common Actions...</a></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th><a class="indexElement" href="#Adding_Customers">...Adding Customers</a><br><a class="indexElement" href="#Adding_Orders">...Adding an Order</a><br><a class="indexElement" href="#Close_Orders">...Close/Cancel an Order</a><br><a class="indexElement" href="#Adding_Items">...Add/remove items to an order</a><br></th>
+                        </tr>
+                        
+                    </table>
+                    
+                    
+                
+                </div>
+                
+                <div id="manage-customers-block" class="split-body-chunk command-box">
+                
+                    <h3>Quick Help</h3>
+                    <h5>Select Index Above for All Topics</h5>
+                    
+                    <h3> Add Customer </h3>
+                    
+                    <p>Select "Add Customer" from the menu.</p>
+                    <p>Type customer name and click add.</p>
+                    
+                    <h3> Edit Customer & Orders </h3>
+                    
+                    <p> Select "Manage Current Customers"</p>
+                    <p> Select an active customer from the list on the left.</p>
+                    <p> Follow onscreen UI in the "Selected Customer" box to edit data.</p>
+                    
+                    
+                
+                </div>  
+                
+                <div class="split-body-chunk command-box"></div>
+                
+            
+            </div>
+            
+            <div class="fifty-split helper-split-right">
+            
+                <div class="split-header">
+                
+                    <h2>Documentation</h2>
+                    
+                </div>
+                
+                <div class="split-body-chunk helper-text-wrap">
+                
+                    <div class="helper-text">
+                    
+                        <h2 id="About">About</h2>
+                        
+                        <h4 id="Copyright">Copyright</h4>
+                        
+                        <p>All works including but not limited to this documentation, source code, UI Design, Layout, and data implementation are copyrighted by the source code author ACatThatPrograms.<br><br>This does not include data returned from API communications that are not owned by the author.<br><br>This does not include company logos used for demonstration as they are held copyright to their respective owners.</p>
+                        
+                        <h4 id="Terms_Of_Use">Terms of Use</h4>
+                        
+                        <p>This code has been written as a demonstration of skill and is not to be used within production or development by any person other than the author.</p>
+						<p>Please view README.MD for full license.</p>
+                        
+                        <h4 id="Source_Information">Source Information</h4>
+                        
+                        <p>Frameworks and Core Code Information<br><br>
+
+This interface has been developed utilizing HTML5, CSS3, and JavaScript including the utilization of the following JS Frameworks:<br><br>Jquery3.3.1, JqueryUI 1.12.1 and the corresponding CSS for JqueryUI.</p>
+                        
+                        <h2 id="Device_Support">Device Support</h2>
+                        
+                        <h4 id="Browsers">Browsers</h4>
+                        
+                        <p>Most modern operating systems that will run the following modern browsers:</p>
+                        <p></p>
+                        
+                        <table>
+                            
+                                <tr>
+                                    <td>Browser</td>
+                                    <td>Supported</td>
+                                    <td>Not Supported</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>Google Chrome<br>64.0.3282.186</td>
+                                    <td>X*</td>
+                                    <td></td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>Mozilla Firefox<br>59.0.1</td>
+                                    <td>X</td>
+                                    <td></td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>Edge<br>41.16299.248.0</td>
+                                    <td></td>
+                                    <td>X</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>Internet Explorer</td>
+                                    <td></td>
+                                    <td>X</td>
+                                </tr>
+                        
+                        </table>
+                        <p></p>
+                        <p>*Testing remotely to the API in Chrome 65+ will need CORS disabled with the following flags:<br><br> --disable-web-security --user-data-dir</p>
+
+<p>Alternatively the API Server can set-up CORS "Access-Control-Allow-Origin","*" Headers or supply their own for security.</p>
+                        
+                        <h4 id="Resolutions">Resolutions</h4>
+                        
+                        <p>This UI was built for static non-dynamic displays. It will flow between the supported resolutions dynamically, though should not be forced onto display smaller than the minimum of 1152 x 864*.</p>
+                        
+                        <p></p>
+                        
+                        <table>
+                            
+                                <tr>
+                                    <td>800x600</td>
+                                    <td>1024 x 768</td>
+                                    <td>1152 x 864</td>
+                                    <td>1280 x 1024</td>
+                                    <td>1600 x 1200</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>X</td>
+                                    <td>X</td>
+                                    <td>X</td>
+                                </tr>
+                            
+                        
+                        </table>
+                        <p></p>
+                        <p>*Smaller resolution screens will scroll across the ui and function, but will deteriorate the end user experience.</p>
+                        
+                        <h3 id="Getting_Started">Getting Started</h3>
+                        
+                        <h2 id="Quick_Start">Quick Start</h2>
+                        
+                        <p>This customer management UI has been built with ease of use for the user in mind. The following instructions below should get you started and familiar with the operation of this program.</p>
+                        
+                        <p>If further help is needed please consult the rest of the documentation.</p>
+
+                        <h5> Add Customer </h5>
+
+                        <p>Select "Add Customer" from the menu.</p>
+                        <p>Type customer name and click add.</p>
+
+                        <h5> Edit Customer and Orders </h5>
+
+                        <p> Select "Manage Current Customers"</p>
+                        <p> Select an active customer from the list on the left.</p>
+                        <p> Follow onscreen UI in the "Selected Customer" box to edit data.</p>
+                        
+                        <h2 id="The_UI">The User Interface</h2>
+                        
+                        <p>The user interface consists of the five major items.<h5>Click their name to load an image of the UI piece.</h5>
+                        
+                        <h3 id="Menu_Panel" class="img_button img-link" data-link="img/menupanel.png">Menu Panel</h3>
+                        <p>Used for switching active Action Panel</p>
+                        
+                        <p>"Add New Customer" will switch to the "Add Customer" action panel.</p>
+                        
+                        <p>"Manage Current Customer" will switch to the "Customer Management" action panel.</p>
+                        
+                        <p>"Help" will load this documentation.</p>
+                        
+                        <h3 id="Action_Panel" class="img_button img-link" data-link="img/actionspanel.png">Actions Panel</h3>
+                        <p>Used for corresponding menu actions</p>
+                        
+                        <h4>Within Add Customer Action Panel</h4>
+                        
+                        <p> Within this panel you will be able to add new customers.</p>
+                        
+                        <h4 >Within Manage Customers Panel</h4>
+                        
+                        <p> Within this panel you will be able to select existing customers to edit them and their corresponding orders.</p>
+                        
+                        <h3 id="Customer_Panel" class="img_button img-link" data-link="img/customerpanel.png">Selected Customer Panel</h3>
+                        
+                        <p> Within this panel you will be able to see existing customer information as well as create new orders and edit existing ones.</p>
+                        
+                        <h3 id="Edit_Orders_Box" class="img_button img-link" data-link="img/editorderbox.png">Edit Order Box</h3>
+                        
+                        <p>This popup will allow you to edit the selected order's order items by adding or removing them.</p>
+                        
+                        <p>This box also allows access to the item list box for selecting item IDs.</p>
+                        
+                        <h3 id="Item_List_Box" class="img_button img-link" data-link="img/itemlistbox.png">Item List Box</h3>
+                        <p>This box is used to fetch the itemIDs for the corresponding items you wish to add.</p>
+                        
+                        <h2 id="Common_Actions">Common Actions</h2>
+                        
+                        <h3 id="Adding_Customers">Adding Customers</h3>
+                        
+                        <p>1. Click "Add New Customer" at the top right of the screen.</p>
+                        
+                        <p>2. Type new customer name in the 'Customer Name' field and then click Add Customer.</p>
+                        
+                        <p>3. The new customer will now be available in the customer list by switching to the 'Manage Current Customers' action panel in the top right.</p>
+                        
+                        <h3 id="Adding_Order">Adding an Order</h3>
+                        
+                        <p>If you just added a customer, you will need to generate a new order for them with the 'Add Order' button.</p>
+                        
+                        <p>1. Load the 'Manage Current Customers' action panel at the top right of the screen.</p>
+                        
+                        <p>2. Select a customer in in the left "Manage Customers" panel. This will load the customer into the "Selected Customer" panel for editing.<br><br>*Keep in mind the customer list is categorized alphabetically.</p>
+                        
+                        <p>3. When selected, the customer's most recent order, if any, will load.</p>
+                        
+                        <p>4. If no order exists, you will be informed of the absence of orders.</p>
+                        
+                        <p>To add a new order click the 'New Order' button.<br><br>*You will not be able to create a new order if a current open order exists.</p>
+                        
+                        <p>5. If multiple orders exist, these orders can be selected using the Order List selector in the 'Selected Customer' panel to view old canceled or closed orders.</p>
+                        
+                        <h3 id="Close_Orders">Closing/Canceling an Order</h3>
+                        
+                        <p>After selecting an order you can close or cancel the order by pressing the close or cancel order buttons below the Order Items list on the 'Selected Customer' panel.</p>
+                        
+                        <h3 id="Adding_Items">Add/Remove Items from an Order</h3>
+                        
+                        <p>After loading a customer and an order you can click the edit order button located on th 'Selected Customer' panel to edit the currently selected order.</p>
+                        
+                        <p>In the 'Edit Order Items' box you will need to enter the quantity of the item you want to add and fetch the itemID from the Item List by clicking the 'View Item List' button.</p>
+                        
+                        <p>The item list loaded with the 'View Item List' button will allow you to click any of the available items which will load the itemID into the 'Edit Order Items' box for adding or removing.*</p>
+                        
+                        <p>*You are not allowed to manually edit itemIDs, they are populated by the available items.</p>
+
+                        
+                    
+                    </div>
+                
+                </div>
+                
+
+            </div>
+        
+        </div>
+    
+    </body>
+    
+</html>

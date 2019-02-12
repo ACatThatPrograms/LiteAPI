@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>ACAT API Testing</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+
+
+    </head>
+    
+    <div id="item-list-popup" class="popup">
+    
+        <div class="popup-wrapper">
+        
+            <div class="popup-header"><h2>Item List</h2><div class="popup-close"><span>X</span></div></div>
+            
+            <div class="popup-body">
+            
+                <div class="popup-body-section sectionFull">
+                    
+                    <div class='titlepiece'><h4>Select an item to transfer the ID</h4></div>
+                    
+                    <div class="popup-itemList-wrap">
+                    
+                    <ul id="popup-itemList">
+                    </ul>
+
+                    </div>
+
+                </div>
+            
+            </div>
+            
+        </div>
+    
+    </div>
+        
+    <div id="edit-order-popup" class="popup">
+                
+        <div class="popup-wrapper">
+
+            <div class="popup-header"><h2>Edit Order Items</h2><div class="popup-close"><span>X</span></div></div>
+            
+            <div class="popup-body">
+            
+                <div class="popup-body-section section1">
+                    
+                    <div class="command-row">
+                    
+                        <form>
+                            <input class="itemQty" type='text' value="Enter a numeral of 1-5"><span> of </span><span>Item ID: </span><input class="itemIdentity" type='text' value='ItemID' disabled=""><button id="button-add-item">Add Item</button>
+                            <button id="button-remove-item">Remove Item</button>
+                            <button id="button-select-item">View Item List</button>
+                        </form>
+                    
+                    </div>
+
+                    
+                </div>
+                
+                <div class="popup-body-section itemList">
+                
+                    <h4>Click to expand item data.</h4>
+                    <ul id="OrderItems-ItemList">
+                    </ul>
+                    
+                </div>
+                
+                
+            
+            </div>
+
+        </div>
+    
+    </div>
+    
+    <body class='body-wrapper'>
+        
+        <div class="body-header">
+        
+            <div class="title">
+            
+                <div class="title-logo"><img src="logo.svg" alt="Logo"></div>
+                <div class="title-text"><h3>Customer Management</h3></div>
+            
+            </div>
+            
+            <div class="navigation">
+            
+                <ul>
+                    
+                    <span>Menu:</span>
+                    <a id="command-addCustomer" href="#AddCustomer"><li>Add New Customer</li></a>
+                    <li id="command-manageCustomers"><a href="#ManageCustomers">Manage Current Customers</a></li>
+                    <a href="help.html"><li id="command-help">Help</li> </a>
+                    
+                </ul>
+            
+            </div>
+        
+        </div>
+        
+        <div class="body-main">
+        
+            <div class="fifty-split">
+            
+                <div class="split-header">
+                
+                    <h2>Actions</h2>
+                    
+                </div>
+                
+                <div class="split-body-chunk command-intro">
+                
+                    <p>Select an action from the menu</p>
+                
+                
+                </div>
+                
+                <div id="add-customer-block" class="split-body-chunk command-box">
+                
+                    <h3>Add New Customer</h3>
+                    
+                    <p>A new customer may be added to the database by typing their name and clicking "Add Customer".</p>
+                    
+                    <div class="action-holder">
+                    
+                        <form>
+                        Customer Name: <input id="add-customer-name" type="text" name="Customer-Name">
+                        </form>
+                        <button id="button-add-customer">Add Customer</button>
+                        
+                    </div>
+                
+                </div>
+                
+                <div id="manage-customers-block" class="split-body-chunk command-box">
+                
+                    <h3>Manage Customers</h3>
+                    
+                    <p>Click a customer to select them.</p>
+                    
+                    <div class="action-holder customer-list-box">
+                                        
+
+                        <ul id="cListAlt">
+
+                        </ul>
+
+                        
+                    </div>
+                    
+                
+                </div>                
+                <div class="split-body-chunk command-box"></div>
+                
+            
+            </div>
+            
+            <div class="fifty-split">
+            
+                <div class="split-header">
+                
+                    <h2>Selected Customer</h2>
+                    
+                </div>
+                
+                <div class="split-body-chunk">
+                
+                    <div class="data-box">
+                                        
+                        <div class="data-title"><span>Active Customer:</span></div>
+                        <div class= "data-info data-info-activeCustomer"><span>Please select a customer</span></div>
+                        
+                    </div>
+                    
+                    <div class="data-box">
+                                        
+                        <div class="data-title"><span>ID:</span></div>
+                        <div class= "data-info data-info-customerID"><span>...</span></div>
+                        
+                    </div>
+                    
+                    <div class="data-box">
+                                        
+                        <div class="data-title"><span>Status:</span></div>
+                        <div class= "data-info data-info-customerStatus"><span>...</span></div>
+                        
+                    </div>
+                    
+                    <div class="data-box">
+                                        
+                        <div class="data-title"><span>Date Created:</span></div>
+                        <div class= "data-info data-info-customerCreated"><span>...</span></div>
+                        
+                    </div>
+                    
+                    <div class="data-box">
+                                        
+                        <div class="data-title"><span>Date Modified:</span></div>
+                        <div class= "data-info data-info-customerModified"><span>...</span></div>
+                        
+                    </div>
+                    
+                    <div class="data-box options-data-box">
+                        
+                        <div class= "data-info data-info-customerOrders">
+                        
+                                        
+                            <div class="alt-select">
+                                <span>Order List:</span>
+                                <ul>
+                                    <li><div class="alt-select-firstLine"><span>Selection</span><div class="arrow">↓</div></div>
+                                        <ul id="orderList">
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <button id="button-newOrder"><span>New Order</span></button>
+
+
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="data-box-orders">
+                        
+                        <div>
+                            <div class="data-title"><span>Order ID:</span></div>
+                            <div class= "data-info data-info-orderID"><span>...</span></div>
+                        </div>
+                        
+                        <div>
+                            <div class="data-title"><span>Order Status:</span></div>
+                            <div class= "data-info data-info-orderStatus"><span>...</span></div>
+                        </div>
+                        
+                        <div>
+                        
+                            <div class="data-title"><span>Order Items</span></div>
+                            <div class= "data-info"><span>Click items for quick removal</span></div>
+                            
+                        </div>
+                        
+                        <div class="orderItemsBox">
+                        
+                            
+                            <div class="orderBox">
+                            
+                                <ul id="orderItemsBox">
+                                </ul>
+                            
+                            </div>
+                            
+ 
+                        </div>
+                        
+                        <div class="orderCommandBox">
+                        
+                            <button id="button-edit-order"><span>Edit Order</span></button>
+                            <button id="button-close-order"><span>Close Order</span></button>
+                            <button id="button-cancel-order"><span>Cancel Order</span></button>
+                        
+                        </div>
+                        
+                    </div>
+                    
+
+                
+                
+                </div>
+                
+
+            </div>
+        
+        </div>
+    
+    </body>
+    
+</html>
