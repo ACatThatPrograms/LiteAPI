@@ -1,23 +1,21 @@
--------------------------------------
-		ABOUT
--------------------------------------
+
+##ABOUT
 
 API Testing V.2.0.1
 
 Please refer to API Testing .docx or the in-app documentation for any questions regarding use of this software
 not covered within the scope of this readme.
 
--------------------------------------
-	   GETTING STARTED
--------------------------------------
+Defaults to an array-load for testing.
+
+##GETTING STARTED
 
 1. Load index.html to begin*
 
 * Loading help.html will load the in-app documentation.
 
--------------------------------------
-	COPYRIGHT & LICENSING
--------------------------------------
+
+##COPYRIGHT & LICENSING
 
 This software is for demonstration purposes only.
 
