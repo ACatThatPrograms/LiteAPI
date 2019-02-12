@@ -1,5 +1,5 @@
 
-##ABOUT
+## ABOUT
 
 API Testing V.2.0.1
 
@@ -8,14 +8,14 @@ not covered within the scope of this readme.
 
 Defaults to an array-load for testing.
 
-##GETTING STARTED
+## GETTING STARTED
 
 1. Load index.html to begin*
 
 * Loading help.html will load the in-app documentation.
 
 
-##COPYRIGHT & LICENSING
+## COPYRIGHT & LICENSING
 
 This software is for demonstration purposes only.
 
